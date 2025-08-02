@@ -4,8 +4,8 @@ A modern, full-stack social networking platform inspired by LinkedIn, built with
 
 ## 🚀 Live Demo
 
-- **Frontend**: [Coming Soon - Will be deployed on Vercel]
-- **Backend API**: [Coming Soon - Will be deployed on Render]
+- **Frontend**: [deployed on Vercel]
+- **Backend API**: [deployed on Render]
 
 ## 🛠️ Tech Stack
 
