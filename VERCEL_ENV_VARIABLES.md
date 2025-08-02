@@ -6,7 +6,7 @@ Copy and paste these environment variables in your Vercel project settings:
 
 ### 1. NEXT_PUBLIC_API_URL
 ```
-NEXT_PUBLIC_API_URL=https://your-project-name.vercel.app/api
+NEXT_PUBLIC_API_URL=https://linkedinminiurjit.vercel.app/api
 ```
 **Note:** Replace `your-project-name` with your actual Vercel project name. This will be auto-generated when you deploy.
 
