@@ -69,3 +69,185 @@ body {
 .btn-outline {
   @apply border border-linkedin-blue text-linkedin-blue hover:bg-linkedin-blue hover:text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200;
 }
+
+/* Enhance form label visibility */
+label {
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* Enhanced Input Field Styles for Better Visibility */
+.input-field {
+  @apply appearance-none block w-full px-3 py-2 border-2 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-linkedin-blue focus:border-linkedin-blue transition-all duration-200;
+  min-height: 44px; /* Ensure minimum touch target size */
+  font-size: 16px; /* Prevent zoom on iOS */
+  line-height: 1.5;
+  background-color: #ffffff;
+  color: #000000; /* Darker text for better visibility */
+  font-weight: 500; /* Slightly bolder text */
+}
+
+/* Ensure placeholder text is clearly visible */
+.input-field::placeholder,
+.input-field-with-icon::placeholder,
+.input-field-with-right-icon::placeholder,
+.input-field-with-both-icons::placeholder {
+  color: #6b7280;
+  opacity: 1; /* Firefox */
+}
+
+/* Enhance visibility of input field icons */
+.input-field-with-icon ~ div svg,
+.input-field-with-right-icon ~ div svg,
+.input-field-with-both-icons ~ div svg {
+  color: #4b5563;
+  width: 20px;
+  height: 20px;
+}
+
+.input-field:focus {
+  box-shadow: 0 0 0 3px rgba(10, 102, 194, 0.2);
+  border-color: #0a66c2;
+}
+
+/* Style for input when user is typing */
+.input-field:not(:placeholder-shown) {
+  color: #000000;
+  font-weight: 500;
+}
+
+/* Enhance error message visibility */
+.text-red-600 {
+  color: #dc2626 !important;
+  font-weight: 500;
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.input-field:disabled {
+  @apply bg-gray-100 cursor-not-allowed opacity-60;
+}
+
+.input-field-with-icon {
+  @apply input-field pl-10;
+}
+
+.input-field-with-right-icon {
+  @apply input-field pr-10;
+}
+
+.input-field-with-both-icons {
+  @apply input-field pl-10 pr-10;
+}
+
+/* Textarea specific styles */
+.textarea-field {
+  @apply input-field resize-none;
+  min-height: 80px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+/* Search input specific styles */
+.search-input {
+  @apply input-field;
+  min-height: 48px;
+  font-size: 16px;
+}
+
+/* Mobile-first responsive input styles */
+@media (max-width: 640px) {
+  .input-field,
+  .textarea-field,
+  .search-input {
+    font-size: 16px; /* Prevent zoom on mobile */
+    min-height: 48px; /* Better touch targets */
+    padding: 12px 16px;
+    border-width: 2px; /* Ensure border is visible */
+    color: #000000; /* Ensure text is visible */
+    font-weight: 500; /* Slightly bolder text */
+  }
+  
+  .input-field-with-icon {
+    padding-left: 44px;
+  }
+  
+  .input-field-with-right-icon {
+    padding-right: 44px;
+  }
+  
+  .input-field-with-both-icons {
+    padding-left: 44px;
+    padding-right: 44px;
+  }
+  
+  /* Ensure placeholder text is clearly visible on mobile */
+  .input-field::placeholder,
+  .input-field-with-icon::placeholder,
+  .input-field-with-right-icon::placeholder,
+  .input-field-with-both-icons::placeholder {
+    opacity: 1;
+    color: #6b7280;
+  }
+}
+
+/* Ensure text is always visible and not cut off */
+.input-field,
+.textarea-field,
+.search-input {
+  overflow: visible;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.textarea-field {
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .input-field,
+  .textarea-field,
+  .search-input {
+    border-width: 2px;
+    border-color: #000000;
+  }
+  
+  .input-field:focus,
+  .textarea-field:focus,
+  .search-input:focus {
+    border-color: #0066cc;
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.3);
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .input-field,
+  .textarea-field,
+  .search-input {
+    background-color: #1f2937; /* Darker background for better contrast */
+    border-color: #6b7280; /* Lighter border for visibility */
+    border-width: 2px; /* Thicker border */
+    color: #ffffff; /* White text for maximum visibility */
+    font-weight: 500; /* Slightly bolder text */
+  }
+  
+  .input-field::placeholder,
+  .textarea-field::placeholder,
+  .search-input::placeholder {
+    color: #d1d5db; /* Lighter placeholder text for better visibility */
+    opacity: 1;
+  }
+  
+  .input-field:focus,
+  .textarea-field:focus,
+  .search-input:focus {
+    border-color: #60a5fa; /* Brighter blue for better visibility */
+    box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.3); /* More visible focus ring */
+  }
+}
