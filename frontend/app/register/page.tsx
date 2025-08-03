@@ -105,7 +105,7 @@ export default function RegisterPage() {
                   })}
                   type="text"
                   autoComplete="name"
-                  className="appearance-none block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:ring-linkedin-blue focus:border-linkedin-blue sm:text-sm"
+                  className="input-field-with-icon"
                   placeholder="Enter your full name"
                 />
               </div>
@@ -132,7 +132,7 @@ export default function RegisterPage() {
                   })}
                   type="email"
                   autoComplete="email"
-                  className="appearance-none block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:ring-linkedin-blue focus:border-linkedin-blue sm:text-sm"
+                  className="input-field-with-icon"
                   placeholder="Enter your email"
                 />
               </div>
@@ -159,7 +159,7 @@ export default function RegisterPage() {
                   })}
                   type={showPassword ? 'text' : 'password'}
                   autoComplete="new-password"
-                  className="appearance-none block w-full pl-10 pr-10 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:ring-linkedin-blue focus:border-linkedin-blue sm:text-sm"
+                  className="input-field-with-both-icons"
                   placeholder="Enter your password"
                 />
                 <div className="absolute inset-y-0 right-0 pr-3 flex items-center">
@@ -193,7 +193,7 @@ export default function RegisterPage() {
                   })}
                   type={showConfirmPassword ? 'text' : 'password'}
                   autoComplete="new-password"
-                  className="appearance-none block w-full pl-10 pr-10 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:ring-linkedin-blue focus:border-linkedin-blue sm:text-sm"
+                  className="input-field-with-both-icons"
                   placeholder="Confirm your password"
                 />
                 <div className="absolute inset-y-0 right-0 pr-3 flex items-center">
